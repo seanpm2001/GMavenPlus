@@ -52,14 +52,14 @@
 <a class="jxr_linenumber" name="L44" href="#L44">44</a>          testMojo.project = project;
 <a class="jxr_linenumber" name="L45" href="#L45">45</a>          doReturn(<strong class="jxr_keyword">new</strong> Properties()).when(testMojo).setupProperties();
 <a class="jxr_linenumber" name="L46" href="#L46">46</a>          doReturn(emptyList()).when(testMojo).setupGroovyDocSources(any(FileSet[].<strong class="jxr_keyword">class</strong>), any(FileSetManager.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>          doNothing().when(testMojo).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), anyObject(), anyListOf(String.<strong class="jxr_keyword">class</strong>), anyObject());
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          doNothing().when(testMojo).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(), anyList(), any());
 <a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
 <a class="jxr_linenumber" name="L49" href="#L49">49</a>  
 <a class="jxr_linenumber" name="L50" href="#L50">50</a>      @Test
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>      @SuppressWarnings(<span class="jxr_string">"deprecation"</span>)
 <a class="jxr_linenumber" name="L52" href="#L52">52</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDontSkipGroovyDoc() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="L53" href="#L53">53</a>          testMojo.doGroovyDocGeneration(<strong class="jxr_keyword">new</strong> FileSet[]{<strong class="jxr_keyword">new</strong> FileSet()}, emptyList(), <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">""</span>));
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>          verify(testMojo, times(1)).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), anyObject(), anyListOf(String.<strong class="jxr_keyword">class</strong>), anyObject());
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          verify(testMojo, times(1)).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(), anyList(), any());
 <a class="jxr_linenumber" name="L55" href="#L55">55</a>      }
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  
 <a class="jxr_linenumber" name="L57" href="#L57">57</a>      @Test
@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSkipGroovyDoc() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="L60" href="#L60">60</a>          testMojo.skipGroovyDoc = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="L61" href="#L61">61</a>          testMojo.doGroovyDocGeneration(<strong class="jxr_keyword">new</strong> FileSet[]{<strong class="jxr_keyword">new</strong> FileSet()}, emptyList(), <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">""</span>));
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>          verify(testMojo, never()).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), anyObject(), anyListOf(String.<strong class="jxr_keyword">class</strong>), anyObject());
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          verify(testMojo, never()).generateGroovyDoc(any(File.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(Class.<strong class="jxr_keyword">class</strong>), any(), anyList(), any());
 <a class="jxr_linenumber" name="L63" href="#L63">63</a>      }
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>  
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> TestMojo <strong class="jxr_keyword">extends</strong> AbstractGroovyDocMojo {
@@ -79,6 +79,6 @@
 <a class="jxr_linenumber" name="L71" href="#L71">71</a>  }
 </pre>
 <hr/>
-<div id="footer">Copyright &#169; 2011&#x2013;2021. All rights reserved.</div>
+<div id="footer">Copyright &#169; 2011&#x2013;2022. All rights reserved.</div>
 </body>
 </html>
