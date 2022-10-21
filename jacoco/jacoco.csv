@@ -16,7 +16,7 @@ GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractToolsMojo,51,186,9,43,13,
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AddTestSourcesMojo,0,50,0,4,0,8,0,5,0,3
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,GroovyDocJarMojo,179,0,14,0,35,0,10,0,3,0
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,ShellMojo,391,0,20,0,54,0,14,0,4,0
-GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractCompileMojo,781,813,55,95,76,82,35,47,2,5
+GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractCompileMojo,781,883,55,103,76,90,35,51,2,5
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,GenerateStubsMojo,0,107,0,0,0,24,0,2,0,2
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,ExecuteMojo,198,381,15,17,34,65,12,11,0,7
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractGroovyDocMojo,880,344,84,22,113,55,55,7,4,5
@@ -30,6 +30,6 @@ GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AddTestStubSourcesMojo,0,28,0,2,0
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,GroovyDocMojo,5,84,0,0,2,18,0,2,0,2
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,CompileTestsMojo,0,95,0,2,0,22,0,3,0,2
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractGroovySourcesMojo,30,311,2,18,2,53,2,13,0,5
-GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractGenerateStubsMojo,488,675,34,88,57,68,27,44,5,5
+GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,AbstractGenerateStubsMojo,488,745,34,96,57,76,27,48,5,5
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,RemoveTestStubsMojo,0,15,0,2,0,4,0,3,0,2
 GMavenPlus Plugin,org.codehaus.gmavenplus.mojo,GenerateTestStubsMojo,0,114,0,2,0,26,0,3,0,2
