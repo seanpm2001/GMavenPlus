@@ -313,7 +313,7 @@ import static org.codehaus.gmavenplus.util.ReflectionUtils.invokeMethod;
 <span class="fc" id="L313">        Properties docProperties = setupProperties();</span>
 <span class="fc" id="L314">        Object fileOutputTool = invokeConstructor(findConstructor(fileOutputToolClass));</span>
 <span class="fc" id="L315">        Object classpathResourceManager = invokeConstructor(findConstructor(classpathResourceManagerClass));</span>
-<span class="fc" id="L316">        FileSetManager fileSetManager = new FileSetManager(getLog());</span>
+<span class="fc" id="L316">        FileSetManager fileSetManager = new FileSetManager();</span>
 <span class="fc" id="L317">        List&lt;String&gt; sourceDirectoriesStrings = new ArrayList&lt;&gt;();</span>
 <span class="fc bfc" id="L318" title="All 2 branches covered.">        for (FileSet sourceDirectory : sourceDirectories) {</span>
 <span class="fc" id="L319">            sourceDirectoriesStrings.add(sourceDirectory.getDirectory());</span>
@@ -563,4 +563,4 @@ import static org.codehaus.gmavenplus.util.ReflectionUtils.invokeMethod;
 <span class="nc" id="L563">    }</span>
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

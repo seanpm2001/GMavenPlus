@@ -42,7 +42,7 @@ import static java.util.Collections.singletonList;
      */
     protected Set&lt;File&gt; getStubs(File outputDirectory) {
 <span class="fc" id="L44">        Set&lt;File&gt; files = new HashSet&lt;&gt;();</span>
-<span class="fc" id="L45">        FileSetManager fileSetManager = new FileSetManager(getLog());</span>
+<span class="fc" id="L45">        FileSetManager fileSetManager = new FileSetManager();</span>
 
 <span class="fc" id="L47">        FileSet fileSet = new FileSet();</span>
 <span class="fc" id="L48">        fileSet.setDirectory(outputDirectory.getAbsolutePath());</span>
@@ -55,4 +55,4 @@ import static java.util.Collections.singletonList;
     }
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

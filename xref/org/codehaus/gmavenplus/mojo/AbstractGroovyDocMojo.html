@@ -321,7 +321,7 @@
 <a class="jxr_linenumber" name="L313" href="#L313">313</a>         Properties docProperties = setupProperties();
 <a class="jxr_linenumber" name="L314" href="#L314">314</a>         Object fileOutputTool = invokeConstructor(findConstructor(fileOutputToolClass));
 <a class="jxr_linenumber" name="L315" href="#L315">315</a>         Object classpathResourceManager = invokeConstructor(findConstructor(classpathResourceManagerClass));
-<a class="jxr_linenumber" name="L316" href="#L316">316</a>         FileSetManager fileSetManager = <strong class="jxr_keyword">new</strong> FileSetManager(getLog());
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         FileSetManager fileSetManager = <strong class="jxr_keyword">new</strong> FileSetManager();
 <a class="jxr_linenumber" name="L317" href="#L317">317</a>         List&lt;String&gt; sourceDirectoriesStrings = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
 <a class="jxr_linenumber" name="L318" href="#L318">318</a>         <strong class="jxr_keyword">for</strong> (FileSet sourceDirectory : sourceDirectories) {
 <a class="jxr_linenumber" name="L319" href="#L319">319</a>             sourceDirectoriesStrings.add(sourceDirectory.getDirectory());
@@ -573,6 +573,6 @@
 <a class="jxr_linenumber" name="L565" href="#L565">565</a> }
 </pre>
 <hr/>
-<div id="footer">Copyright &#169; 2011&#x2013;2022. All rights reserved.</div>
+<div id="footer">Copyright &#169; 2011&#x2013;2023. All rights reserved.</div>
 </body>
 </html>

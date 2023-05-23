@@ -52,7 +52,7 @@ import static java.util.Collections.singletonList;
      */
     protected SortedSet&lt;File&gt; getFiles(final FileSet[] fromSources, final boolean includeJavaSources) {
 <span class="fc" id="L54">        SortedSet&lt;File&gt; files = new TreeSet&lt;&gt;();</span>
-<span class="fc" id="L55">        FileSetManager fileSetManager = new FileSetManager(getLog());</span>
+<span class="fc" id="L55">        FileSetManager fileSetManager = new FileSetManager();</span>
 
 <span class="fc bfc" id="L57" title="All 2 branches covered.">        for (FileSet fileSet : getFilesets(fromSources, includeJavaSources)) {</span>
 <span class="pc bpc" id="L58" title="1 of 2 branches missed.">            for (String include : fileSetManager.getIncludedFiles(fileSet)) {</span>
@@ -72,7 +72,7 @@ import static java.util.Collections.singletonList;
      */
     protected SortedSet&lt;File&gt; getTestFiles(final FileSet[] fromSources, final boolean includeJavaSources) {
 <span class="fc" id="L74">        SortedSet&lt;File&gt; files = new TreeSet&lt;&gt;();</span>
-<span class="fc" id="L75">        FileSetManager fileSetManager = new FileSetManager(getLog());</span>
+<span class="fc" id="L75">        FileSetManager fileSetManager = new FileSetManager();</span>
 
 <span class="fc bfc" id="L77" title="All 2 branches covered.">        for (FileSet fileSet : getTestFilesets(fromSources, includeJavaSources)) {</span>
 <span class="pc bpc" id="L78" title="1 of 2 branches missed.">            for (String include : fileSetManager.getIncludedFiles(fileSet)) {</span>
@@ -161,4 +161,4 @@ import static java.util.Collections.singletonList;
 <span class="fc" id="L161">        return result;</span>
     }
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
