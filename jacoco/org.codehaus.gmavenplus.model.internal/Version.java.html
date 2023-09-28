@@ -65,7 +65,7 @@ public class Version implements Comparable&lt;Version&gt; {
 <span class="fc" id="L65">        major = newMajor;</span>
 <span class="fc" id="L66">        minor = newMinor;</span>
 <span class="fc" id="L67">        revision = newRevision;</span>
-<span class="fc bfc" id="L68" title="All 4 branches covered.">        if (newTag == null || newTag.length() != 0) {</span>
+<span class="fc bfc" id="L68" title="All 4 branches covered.">        if (newTag == null || !newTag.isEmpty()) {</span>
 <span class="fc" id="L69">            tag = newTag;</span>
         } else {
 <span class="fc" id="L71">            tag = null;</span>
@@ -109,7 +109,7 @@ public class Version implements Comparable&lt;Version&gt; {
      * @return The version parsed from the string
      */
     public static Version parseFromString(final String version) {
-<span class="fc bfc" id="L112" title="All 4 branches covered.">        if (version == null || version.length() == 0) {</span>
+<span class="fc bfc" id="L112" title="All 4 branches covered.">        if (version == null || version.isEmpty()) {</span>
 <span class="fc" id="L113">            throw new IllegalArgumentException(&quot;Version must not be null or empty.&quot;);</span>
         }
 <span class="fc" id="L115">        String[] split = version.split(&quot;[._-]&quot;, 4);</span>

@@ -93,7 +93,7 @@
 <a class="jxr_linenumber" name="L85" href="#L85">85</a>              <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>                  Class&lt;?&gt; groovySystemClass = getClass(<span class="jxr_string">"groovy.lang.GroovySystem"</span>);
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>                  String ver = (String) invokeStaticMethod(findMethod(groovySystemClass, <span class="jxr_string">"getVersion"</span>));
-<a class="jxr_linenumber" name="L88" href="#L88">88</a>                  <strong class="jxr_keyword">if</strong> (ver != <strong class="jxr_keyword">null</strong> &amp;&amp; ver.length() &gt; 0) {
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>                  <strong class="jxr_keyword">if</strong> (ver != <strong class="jxr_keyword">null</strong> &amp;&amp; !ver.isEmpty()) {
 <a class="jxr_linenumber" name="L89" href="#L89">89</a>                      groovyVersion = ver;
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>                  }
 <a class="jxr_linenumber" name="L91" href="#L91">91</a>              } <strong class="jxr_keyword">catch</strong> (ClassNotFoundException | IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {
@@ -106,7 +106,7 @@
 <a class="jxr_linenumber" name="L98" href="#L98">98</a>                  <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="L99" href="#L99">99</a>                      Class&lt;?&gt; invokerHelperClass = getClass(<span class="jxr_string">"org.codehaus.groovy.runtime.InvokerHelper"</span>);
 <a class="jxr_linenumber" name="L100" href="#L100">100</a>                     String ver = (String) invokeStaticMethod(findMethod(invokerHelperClass, <span class="jxr_string">"getVersion"</span>));
-<a class="jxr_linenumber" name="L101" href="#L101">101</a>                     <strong class="jxr_keyword">if</strong> (ver != <strong class="jxr_keyword">null</strong> &amp;&amp; ver.length() &gt; 0) {
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>                     <strong class="jxr_keyword">if</strong> (ver != <strong class="jxr_keyword">null</strong> &amp;&amp; !ver.isEmpty()) {
 <a class="jxr_linenumber" name="L102" href="#L102">102</a>                         groovyVersion = ver;
 <a class="jxr_linenumber" name="L103" href="#L103">103</a>                     }
 <a class="jxr_linenumber" name="L104" href="#L104">104</a>                 } <strong class="jxr_keyword">catch</strong> (ClassNotFoundException | IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {

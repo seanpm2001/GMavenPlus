@@ -85,7 +85,7 @@ public class ClassWrangler {
             try {
 <span class="fc" id="L86">                Class&lt;?&gt; groovySystemClass = getClass(&quot;groovy.lang.GroovySystem&quot;);</span>
 <span class="fc" id="L87">                String ver = (String) invokeStaticMethod(findMethod(groovySystemClass, &quot;getVersion&quot;));</span>
-<span class="pc bpc" id="L88" title="2 of 4 branches missed.">                if (ver != null &amp;&amp; ver.length() &gt; 0) {</span>
+<span class="pc bpc" id="L88" title="2 of 4 branches missed.">                if (ver != null &amp;&amp; !ver.isEmpty()) {</span>
 <span class="fc" id="L89">                    groovyVersion = ver;</span>
                 }
 <span class="fc" id="L91">            } catch (ClassNotFoundException | IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {</span>
@@ -98,7 +98,7 @@ public class ClassWrangler {
                 try {
 <span class="nc" id="L99">                    Class&lt;?&gt; invokerHelperClass = getClass(&quot;org.codehaus.groovy.runtime.InvokerHelper&quot;);</span>
 <span class="nc" id="L100">                    String ver = (String) invokeStaticMethod(findMethod(invokerHelperClass, &quot;getVersion&quot;));</span>
-<span class="nc bnc" id="L101" title="All 4 branches missed.">                    if (ver != null &amp;&amp; ver.length() &gt; 0) {</span>
+<span class="nc bnc" id="L101" title="All 4 branches missed.">                    if (ver != null &amp;&amp; !ver.isEmpty()) {</span>
 <span class="nc" id="L102">                        groovyVersion = ver;</span>
                     }
 <span class="fc" id="L104">                } catch (ClassNotFoundException | IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {</span>
@@ -175,7 +175,7 @@ public class ClassWrangler {
      * @return &lt;code&gt;true&lt;/code&gt; if the detected Groovy version is newer than the specified version, &lt;code&gt;false&lt;/code&gt; otherwise
      */
     public static boolean groovyNewerThan(Version detectedVersion, Version compareToVersion) {
-<span class="nc bnc" id="L178" title="All 2 branches missed.">        return detectedVersion.compareTo(compareToVersion) &gt; 0;</span>
+<span class="pc bpc" id="L178" title="1 of 2 branches missed.">        return detectedVersion.compareTo(compareToVersion) &gt; 0;</span>
     }
 
     /**

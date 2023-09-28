@@ -73,7 +73,7 @@
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>          major = newMajor;
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>          minor = newMinor;
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>          revision = newRevision;
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">if</strong> (newTag == <strong class="jxr_keyword">null</strong> || newTag.length() != 0) {
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">if</strong> (newTag == <strong class="jxr_keyword">null</strong> || !newTag.isEmpty()) {
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>              tag = newTag;
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>          } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="L71" href="#L71">71</a>              tag = <strong class="jxr_keyword">null</strong>;
@@ -117,7 +117,7 @@
 <a class="jxr_linenumber" name="L109" href="#L109">109</a> <em class="jxr_javadoccomment">     * @return The version parsed from the string</em>
 <a class="jxr_linenumber" name="L110" href="#L110">110</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="L111" href="#L111">111</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="Version" href="../../../../../org/codehaus/gmavenplus/model/internal/Version.html#Version">Version</a> parseFromString(<strong class="jxr_keyword">final</strong> String version) {
-<a class="jxr_linenumber" name="L112" href="#L112">112</a>         <strong class="jxr_keyword">if</strong> (version == <strong class="jxr_keyword">null</strong> || version.length() == 0) {
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         <strong class="jxr_keyword">if</strong> (version == <strong class="jxr_keyword">null</strong> || version.isEmpty()) {
 <a class="jxr_linenumber" name="L113" href="#L113">113</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"Version must not be null or empty."</span>);
 <a class="jxr_linenumber" name="L114" href="#L114">114</a>         }
 <a class="jxr_linenumber" name="L115" href="#L115">115</a>         String[] split = version.split(<span class="jxr_string">"[._-]"</span>, 4);
